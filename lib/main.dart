@@ -23,18 +23,11 @@ void main() {
         ),
       ),
       //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      body: Container(
-        //height: 200.0,
-        //width: 300,
-        child:Text(
-          "Flutter is the best",
-          textAlign:TextAlign.center,
-          style:TextStyle(
-            fontSize: 24,
-          ),
+      body: Center(
+        child: Container(
+          color: Colors.green,
+          child: Text("Flutter CheatSheet."),
         ),
-        color: Colors.green.shade200,
-        alignment: Alignment.center,
       ),
     ),
   ));
