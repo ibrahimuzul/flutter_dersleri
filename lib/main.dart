@@ -27,8 +27,12 @@ void main() {
         color:Colors.red,
         child: Row(
         //child: Column(
-          //mainAxisSize: MainAxisSize.max,
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.max,
+          //mainAxisSize: MainAxisSize.min,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Icon(
               Icons.add_circle,
@@ -45,27 +49,13 @@ void main() {
               size: 64,
               color: Colors.orange,
             ),
-            Expanded(
-              child:  Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.purple,
-              ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.purple,
             ),
-            Expanded(
-              child:  Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.purple,
-              ),
-            ),
-            Expanded(
-              child:  Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.purple,
-              ),
-            ),
+
+
 
           ],
         ),
