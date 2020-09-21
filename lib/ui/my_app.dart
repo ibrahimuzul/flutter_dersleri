@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'row_column_odev.dart';
 import 'resim_ve_buton_turleri.dart';
 
 class MyApp extends StatelessWidget {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        body: ResimveButonTurleri(),
+        body: RowColumnOdevCozumu(),//ResimveButonTurleri(),
       ),
     );
   }
