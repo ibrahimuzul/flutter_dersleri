@@ -24,27 +24,117 @@ void main() {
       ),
       //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Container(
-        color: Colors.red,
+        color: Colors.white,
         child: Row(
           //child: Column(
-          mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
           //mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Expanded(
               child: Container(
-                child: Icon(
-                  Icons.add_circle,
-                  size: 64,
-                  color: Colors.yellow,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Icon(
+                          Icons.add_circle,
+                          size: 64,
+                          color: Colors.yellow,
+                        ),
+                        color: Colors.blue.shade200,
+                      ),
+                      flex: 2,
+                    ),
+                  ],
                 ),
-                color: Colors.blue.shade200,
               ),
               flex: 2,
             ),
+
             Expanded(
               child: Container(
                 child: Icon(
@@ -65,7 +155,7 @@ void main() {
                 ),
                 color: Colors.purple.shade200,
               ),
-              flex: 4,
+              flex: 2,
             ),
             Expanded(
               child: Container(
@@ -76,7 +166,7 @@ void main() {
                 ),
                 color: Colors.orange.shade200,
               ),
-              flex: 6,
+              flex: 2,
             ),
           ],
         ),
