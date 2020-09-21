@@ -23,34 +23,51 @@ void main() {
         ),
       ),
       //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      body: Center(
-        child: Container(
-          //width: 300,
-          //height: 300,
-          //alignment: Alignment(1,1),
-          //alignment: Alignment.bottomLeft,
-          color: Colors.green,
-          child: Text(
-            "Flutter CheatSheet.",
-            style: TextStyle(fontSize: 24),
-            textAlign: TextAlign.center,
-          ),
-          /*constraints: BoxConstraints(
-            maxHeight: 300.0,
-            maxWidth: 200.0,
-            minWidth: 150.0,
-            minHeight: 150.0
-          ),*/
-          constraints: BoxConstraints.expand(
-            width: 400,
-            height: 400
-          ),
-          //constraints: BoxConstraints.expand(),
-          //margin: EdgeInsets.all(15),
-          //margin: EdgeInsets.only(left:15),
-          margin: EdgeInsets.symmetric(horizontal:15),
-          //padding: EdgeInsets.all(15),
-          padding: EdgeInsets.only(top:45),
+      body:Container(
+        color:Colors.red,
+        child: Row(
+        //child: Column(
+          //mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.yellow,
+            ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.blue,
+            ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.orange,
+            ),
+            Expanded(
+              child:  Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.purple,
+              ),
+            ),
+            Expanded(
+              child:  Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.purple,
+              ),
+            ),
+            Expanded(
+              child:  Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.purple,
+              ),
+            ),
+
+          ],
         ),
       ),
     ),
