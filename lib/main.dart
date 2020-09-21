@@ -1,105 +1,87 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.cyan, accentColor: Colors.orange),
-    home: new Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Flutter Dersleri",
-          style: TextStyle(fontSize: 24.0, color: Colors.white),
+  runApp(
+    new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.cyan, accentColor: Colors.orange),
+      home: new Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Flutter Dersleri",
+            style: TextStyle(fontSize: 24.0, color: Colors.white),
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          debugPrint("FAB tıklandı");
-        },
-        //backgroundColor: Colors.green,
-        child: Icon(
-          Icons.access_alarms,
-          color: Colors.white,
-          //size: 48,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            debugPrint("FAB tıklandı");
+          },
+          //backgroundColor: Colors.green,
+          child: Icon(
+            Icons.access_alarms,
+            color: Colors.white,
+            //size: 48,
+          ),
         ),
-      ),
-      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            alignment: Alignment.center,
-            child: Text("Image ve Buton Türleri",textAlign: TextAlign.center,style:TextStyle(fontSize: 24),),
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                padding: EdgeInsets.all(40),
-                margin: EdgeInsets.all(2),
-                color: Colors.red.shade100,
-                child: Text(
-                  "D",
-                  style: TextStyle(fontSize: 24),
+        //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        body: Column(
+          children: <Widget>[
+            Text(
+              "Resim ve Buton Türleri",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red.shade200,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      //Image.asset("assets/images/icon.png"),
+                      Image.network("http://hdqwalls.com/wallpapers/small-memory-lp.jpg"),
+                      Text("Asset Image"),
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.all(40),
-                margin: EdgeInsets.all(2),
-                color: Colors.red.shade100,
-                child: Text(
-                  "A",
-                  style: TextStyle(fontSize: 24),
+
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red.shade200,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Image.network("http://hdqwalls.com/wallpapers/small-memory-lp.jpg"),
+                      Text("Network Image"),
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.all(40),
-                margin: EdgeInsets.all(2),
-                color: Colors.red.shade100,
-                child: Text(
-                  "R",
-                  style: TextStyle(fontSize: 24),
+
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red.shade200,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundImage: NetworkImage("https://emrealtunbilek.com/wp-content/uploads/2016/10/apple-icon-72x72.png"),
+                        backgroundColor: Colors.purple,
+                        radius: 30,
+                        foregroundColor: Colors.orange,
+                      ),
+                      Text("Circle Avatar"),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                padding: EdgeInsets.all(40),
-                margin: EdgeInsets.all(2),
-                color: Colors.red.shade100,
-                child: Text(
-                  "D",
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.all(40),
-                margin: EdgeInsets.all(2),
-                color: Colors.red.shade100,
-                child: Text(
-                  "A",
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.all(40),
-                margin: EdgeInsets.all(2),
-                color: Colors.red.shade100,
-                child: Text(
-                  "R",
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     ),
-  ));
+  );
 }
