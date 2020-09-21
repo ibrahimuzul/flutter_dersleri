@@ -85,69 +85,125 @@ void main() {
               ],
             )),
             IntrinsicHeight(
-                child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(4),
-                    color: Colors.red.shade200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        //Image.asset("assets/images/icon.png"),
-                        //Image.network("http://hdqwalls.com/wallpapers/small-memory-lp.jpg"),
-                        FadeInImage.assetNetwork(
-                          placeholder: "assets/images/loading.gif",
-                          image:
-                              "http://hdqwalls.com/wallpapers/small-memory-lp.jpg",
-                        ),
-                        Text("Fade In Image"),
-                      ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(4),
-                    color: Colors.red.shade200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        FlutterLogo(
-                          size: 60,
-                          colors: Colors.orange,
-                          style: FlutterLogoStyle.horizontal,
-                          textColor: Colors.black,
-                        ),
-                        Text("Flutter Logo"),
-                      ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(4),
-                    color: Colors.red.shade200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Expanded(
-                          child: Placeholder(
-                            color: Colors.red,
-                            strokeWidth: 2.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          //Image.asset("assets/images/icon.png"),
+                          //Image.network("http://hdqwalls.com/wallpapers/small-memory-lp.jpg"),
+                          FadeInImage.assetNetwork(
+                            placeholder: "assets/images/loading.gif",
+                            image:
+                                "http://hdqwalls.com/wallpapers/small-memory-lp.jpg",
                           ),
-                        ),
-                        Text("Placeholder Widget"),
-                      ],
+                          Text("Fade In Image"),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
-            )),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          FlutterLogo(
+                            size: 60,
+                            colors: Colors.orange,
+                            style: FlutterLogoStyle.horizontal,
+                            textColor: Colors.black,
+                          ),
+                          Text("Flutter Logo"),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(
+                            child: Placeholder(
+                              color: Colors.red,
+                              strokeWidth: 2.0,
+                            ),
+                          ),
+                          Text("Placeholder Widget"),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 50),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text("Emre Altunbilek"),
+                    color: Colors.orange,
+                    onPressed: () => debugPrint("Fat arrowlu fonksiyon"),
+                  ),
+                  RaisedButton(
+                    child: Text("Flutter ve Dart Dersleri"),
+                    elevation: 12,
+                    textColor: Colors.yellow,
+                    onPressed: () {
+                      debugPrint("Normal lambda expression");
+                      debugPrint("İkinci satır");
+                    },
+                    color: Colors.purple,
+                  ),
+                  RaisedButton(
+                    child: Text("Hızla devam ediyor"),
+                    elevation: 12,
+                    textColor: Colors.black,
+                    onPressed: () {
+                      uzunMethod();
+                    },
+                    color: Colors.red,
+                  ),
+                  RaisedButton(
+                    child: Text("Calısmaya Devam"),
+                    elevation: 12,
+                    textColor: Colors.black,
+                    onPressed: uzunMethod,
+                    color: Colors.blue,
+                  ),
+                  IconButton(
+                      icon: Icon(
+                        Icons.add_circle_outline,
+                        size: 32,
+                      ),
+                      onPressed: () {}),
+                  FlatButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Flat Button",
+                        style: TextStyle(fontSize: 24),
+                      ))
+                ],
+              ),
+            ),
           ],
         ),
       ),
     ),
   );
+}
+
+void uzunMethod() {
+  debugPrint("Cok uzun içerikli fonksiyon");
 }
