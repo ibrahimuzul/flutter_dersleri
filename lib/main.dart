@@ -21,21 +21,19 @@ class MyHomePage extends StatefulWidget {
   final String title;
   int sayac = 0;
 
-  MyHomePage({this.title}){
+  MyHomePage({this.title}) {
     debugPrint("MyhomePage Statefull widget constructor çalıştırıldı");
   }
 
   @override
   State<StatefulWidget> createState() {
     debugPrint("MyhomePage Statefull widget createState çalıştırıldı");
-    return MyHomePageState();
+    return _MyHomePageState();
   }
 }
 
-class MyHomePageState extends State<MyHomePage> {
-
-  MyHomePageState()
-  {
+class _MyHomePageState extends State<MyHomePage> {
+  _MyHomePageState() {
     debugPrint("MyHomePageState State  constructor çalıştırıldı");
   }
 
@@ -49,10 +47,9 @@ class MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            sayacDegeriniArttir();
+            _sayacDegeriniArttir();
             debugPrint("sayac değeri arttırıldı set state çağırıldı");
           });
-
         },
         child: Icon(Icons.add),
       ),
@@ -60,22 +57,43 @@ class MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Butona Basılma Sayısı"),
-            Text(
-              "${widget.sayac}",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            )
+            RaisedButton(
+              child: Text("Arttır"),
+              color: Colors.green,
+              onPressed: () {
+                _sayacDegeriniArttir();
+              },
+            ),
+            Text("${widget.sayac}",
+                style: Theme.of(context).textTheme.display2.copyWith(
+                  color:widget.sayac<0 ? Colors.red : Colors.green
+                )),
+            RaisedButton(
+              child: Text("Arttır"),
+              color: Colors.red,
+              onPressed: () {
+                _sayacDegeriniAzalt();
+              },
+            ),
           ],
         ),
       ),
     );
   }
 
-  void sayacDegeriniArttir() {
-    widget.sayac++;
-    debugPrint(widget.sayac.toString());
+  void _sayacDegeriniArttir() {
+    setState(() {
+      widget.sayac++;
+      debugPrint(widget.sayac.toString());
+    });
+
+  }
+
+  void _sayacDegeriniAzalt() {
+    setState(() {
+      widget.sayac--;
+      debugPrint(widget.sayac.toString());
+    });
+
   }
 }
