@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-class RowColumnOdevCozumu extends StatelessWidget{
+class RowColumnGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Column(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -84,7 +83,4 @@ class RowColumnOdevCozumu extends StatelessWidget{
       ],
     );
   }
-
-
-
 }
