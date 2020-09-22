@@ -19,7 +19,7 @@ void main() {
           ),
         ),
       ),
-      body: RowColumnGridOrnek(),
+      body: EtkinListeOrnek(),
     ),
   ));
 }
