@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dersleri/ui/etkin_liste_ornek.dart';
 
+import 'ui/grid_view_kullanimi.dart';
 import 'ui/row_column_grid.dart';
 
 void main() {
@@ -19,7 +20,7 @@ void main() {
           ),
         ),
       ),
-      body: EtkinListeOrnek(),
+      body: GridViewOrnek(),
     ),
   ));
 }

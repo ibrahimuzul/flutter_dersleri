@@ -111,6 +111,10 @@ class Ogrenci {
   String _aciklama;
   bool _cinsiyet;
 
+  String get isimgetir{
+    return _isim;
+  }
+
   Ogrenci(this._isim, this._aciklama, this._cinsiyet);
 
   @override
