@@ -8,43 +8,49 @@ class GridViewOrnek extends StatelessWidget {
       gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (BuildContext context, int index) {
-        return Container(
-          alignment: Alignment.bottomCenter,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.orange,
-              width: 10,
-              style: BorderStyle.solid,
-            ),
-            //borderRadius: new BorderRadius.all(new Radius.circular(20)),
-            shape:BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.red,
-                offset: new Offset(10, 5),
-                blurRadius: 10,
+        return GestureDetector(
+          child: Container(
+            alignment: Alignment.bottomCenter,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.orange,
+                width: 10,
+                style: BorderStyle.solid,
               ),
-            ],
-            color: Colors.red[100 * ((index + 1) % 8)],
-            gradient: LinearGradient(
-              colors: [Colors.yellow, Colors.red],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              //borderRadius: new BorderRadius.all(new Radius.circular(20)),
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.red,
+                  offset: new Offset(10, 5),
+                  blurRadius: 10,
+                ),
+              ],
+              color: Colors.red[100 * ((index + 1) % 8)],
+              gradient: LinearGradient(
+                colors: [Colors.yellow, Colors.red],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+              image: DecorationImage(
+                image: AssetImage("assets/images/icon.png"),
+                fit: BoxFit.contain,
+                alignment: Alignment.topCenter,
+              ),
             ),
-            image: DecorationImage(
-              image: AssetImage("assets/images/icon.png"),
-              fit: BoxFit.contain,
-              alignment: Alignment.topCenter,
+            margin: EdgeInsets.all(20),
+            //color: Colors.teal[100 * ((index+1) % 8)],
+            child: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text("Merhaba Flutter $index",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20, color: Colors.black)),
             ),
           ),
-          margin: EdgeInsets.all(20),
-          //color: Colors.teal[100 * ((index+1) % 8)],
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text("Merhaba Flutter $index",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, color: Colors.black)),
-          ),
+          onTap:()=>debugPrint("Merhaba flutter $index tıklandı"),
+          onDoubleTap:()=>debugPrint("Merhaba flutter $index çift tıklandı"),
+          onLongPress:()=>debugPrint("Merhaba flutter $index uzun basıldı"),
+          onHorizontalDragStart:(e)=>debugPrint("Merhaba flutter $index Darg $e"),
         );
       },
     );
