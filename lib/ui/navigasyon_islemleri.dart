@@ -47,7 +47,6 @@ class NavigasyonIslemleri extends StatelessWidget {
                     );
                   },
                 ),
-
                 RaisedButton(
                   child: Text("D Sayfasına Git ve Gelirken Veri Getir"),
                   color: Colors.pink,
@@ -55,21 +54,83 @@ class NavigasyonIslemleri extends StatelessWidget {
                     Navigator.push<bool>(
                       context,
                       MaterialPageRoute(builder: (context) => DSayfasi()),
-                    ).then((popOlayindanSonraGelenDeger){
-                      debugPrint("Pop işleminden gelen değer $popOlayindanSonraGelenDeger");
+                    ).then((popOlayindanSonraGelenDeger) {
+                      debugPrint(
+                          "Pop işleminden gelen değer $popOlayindanSonraGelenDeger");
                     });
                   },
                 ),
-
                 RaisedButton(
                   child: Text("E Sayfasına Git ve Geri Gelme"),
                   color: Colors.pink,
                   onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ESayfasi()));
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => ESayfasi()));
+                  },
+                ),
+                RaisedButton(
+                  child: Text("Liste Sayfasına Git"),
+                  color: Colors.pink,
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/listeSayfasi");
                   },
                 ),
               ],
             )));
+  }
+}
+
+class ListeSinifi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Liste Sayfası",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        body: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, "/detay/$index");
+              },
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Liste elemanı $index"),
+                ),
+              ),
+            );
+          },
+          itemCount: 60,
+        ));
+  }
+}
+
+class ListeDetay extends StatelessWidget {
+
+  int tiklanilanIndex=0;
+
+  ListeDetay(this.tiklanilanIndex);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Liste Detay Sayfası",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Liste elemanı $tiklanilanIndex tıklanıldı"),
+          )),
+    );
   }
 }
 
@@ -114,11 +175,12 @@ class FSayfasi extends StatelessWidget {
                   "F SAYFASI",
                   style: TextStyle(color: Colors.red, fontSize: 24),
                 ),
-                RaisedButton(child: Text("G sayfasına Git"),
-                  onPressed: (){
-                    //Navigator.pushReplacementNamed(context, "/GPage");
+                RaisedButton(
+                  child: Text("G sayfasına Git"),
+                  onPressed: () {
                     Navigator.pushReplacementNamed(context, "/GPageb");
-                  },)
+                  },
+                )
               ],
             )));
   }
@@ -142,10 +204,12 @@ class ESayfasi extends StatelessWidget {
                   "E SAYFASI",
                   style: TextStyle(color: Colors.red, fontSize: 24),
                 ),
-                RaisedButton(child: Text("F sayfasına Git"),
-                  onPressed: (){
-                    Navigator.pushNamed(context,"/FPage");
-                  },)
+                RaisedButton(
+                  child: Text("F sayfasına Git"),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/FPage");
+                  },
+                )
               ],
             )));
   }
@@ -155,7 +219,7 @@ class DSayfasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: (){
+      onWillPop: () {
         debugPrint("on will pop çalıstı");
         Navigator.pop(context, false);
         return Future.value(false);
@@ -184,7 +248,6 @@ class DSayfasi extends StatelessWidget {
                       //false ürün silinemedi veya kullanıcı vazgeçti
                     },
                   ),
-
                 ],
               ))),
     );
@@ -266,12 +329,12 @@ class CSayfasi extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
-
                 RaisedButton(
                   color: Colors.purple,
                   child: Text("A Sayfasına Git"),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ASayfasi()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ASayfasi()));
                   },
                 ),
               ],
