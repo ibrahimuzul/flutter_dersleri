@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dersleri/ui/form_islemleri.dart';
 import 'ui/custom_scroll_ve_slivers.dart';
 import 'ui/navigasyon_islemleri.dart';
 import 'ui/grid_view_kullanimi.dart';
@@ -19,6 +20,7 @@ void main() {
       '/CPage/DPage' : (context) => DSayfasi(),
       '/CPage/DPage/FPage' : (BuildContext context) => FSayfasi(),
       '/listeSayfasi' : (context) => ListeSinifi(),
+      '/formIslemleri' : (context) => FormIslemleri(),
     },
 
     onGenerateRoute: (RouteSettings settings) {
