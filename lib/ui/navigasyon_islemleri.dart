@@ -80,7 +80,7 @@ class NavigasyonIslemleri extends StatelessWidget {
                     child: Text("Form İşlemlerine Git"),
                     color: Colors.yellowAccent,
                     onPressed: () {
-                      Navigator.pushNamed(context, "/formIslemleri");
+                      Navigator.pushNamed(context, "/textFieldIslemleri");
                     },
                   ),
                 ],
