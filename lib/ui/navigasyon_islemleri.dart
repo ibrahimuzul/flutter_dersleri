@@ -77,10 +77,25 @@ class NavigasyonIslemleri extends StatelessWidget {
                     },
                   ),
                   RaisedButton(
-                    child: Text("Form İşlemlerine Git"),
+                    child: Text("Textfield İşlemlerine Git"),
                     color: Colors.yellowAccent,
                     onPressed: () {
                       Navigator.pushNamed(context, "/textFieldIslemleri");
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text("TextFormField İşlemlerine Git"),
+                    color: Colors.yellowAccent.shade100,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/textFormField");
+                    },
+                  ),
+
+                  RaisedButton(
+                    child: Text("Diğer Form Elemanları"),
+                    color: Colors.yellowAccent.shade100,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/digerFormElemanlari");
                     },
                   ),
                 ],
