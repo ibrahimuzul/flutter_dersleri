@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'ui/custom_scroll_ve_slivers.dart';
 import 'ui/date_time_picker.dart';
 import 'ui/form_textformfield_ornek.dart';
+import 'ui/stepper_kullalnimi.dart';
 import 'ui/text_field_ozellikleri.dart';
 import 'ui/navigasyon_islemleri.dart';
 import 'ui/diger_form_elemanlari.dart';
@@ -12,7 +13,7 @@ void main() {
   runApp(MaterialApp(
     title: "Flutter Dersleri",
 
-    initialRoute: "/tarihSaat",
+    initialRoute: "/stepper",
 
     routes: {
       '/'      : (context) => NavigasyonIslemleri(),
@@ -20,6 +21,7 @@ void main() {
       '/textFormField' : (context) => FormveTextFormField(),
       '/digerFormElemanlari' : (context) => DigerFormElemanlari(),
       '/tarihSaat' : (context) => TarihSaatOrnek(),
+      '/stepper' : (context) => StepperOrnek(),
       '/CPage' : (context) => CSayfasi(),
       '/DPage' : (context) => DSayfasi(),
       '/GPage' : (context) => GSayfasi(),
