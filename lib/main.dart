@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ui/custom_scroll_ve_slivers.dart';
+import 'ui/date_time_picker.dart';
 import 'ui/form_textformfield_ornek.dart';
 import 'ui/text_field_ozellikleri.dart';
 import 'ui/navigasyon_islemleri.dart';
@@ -11,13 +12,14 @@ void main() {
   runApp(MaterialApp(
     title: "Flutter Dersleri",
 
-    initialRoute: "/digerFormElemanlari",
+    initialRoute: "/tarihSaat",
 
     routes: {
       '/'      : (context) => NavigasyonIslemleri(),
       '/textFieldIslemleri' : (context) => TextFieldIslemleri(),
       '/textFormField' : (context) => FormveTextFormField(),
       '/digerFormElemanlari' : (context) => DigerFormElemanlari(),
+      '/tarihSaat' : (context) => TarihSaatOrnek(),
       '/CPage' : (context) => CSayfasi(),
       '/DPage' : (context) => DSayfasi(),
       '/GPage' : (context) => GSayfasi(),
